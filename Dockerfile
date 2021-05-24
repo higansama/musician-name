@@ -9,4 +9,4 @@ RUN npm install
 
 COPY . .
 
-CMD [ "nodemon", "app.js" ]
+CMD ["nodemon", "app.js" ]

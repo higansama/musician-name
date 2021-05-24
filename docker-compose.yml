@@ -1,0 +1,10 @@
+version: "3.8"
+
+services: 
+    musician:
+        container_name: musician
+        image: nashrull/nodestart:latest
+        restart: always 
+        ports:
+            - 3001:3000
+            
