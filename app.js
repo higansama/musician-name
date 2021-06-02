@@ -3,13 +3,29 @@ const app = express()
 const port = 3000
 
 app.get('/', (req, res) => {
-  res.send('Hello PGI')
+  res.send('hello world')
 })
 
 app.get('/bandung', (req, res) => {
   res.send('Hello Bandung')
 })
 
+app.get('/hitung/', (req, res) => {
+  // hasil = parseInt(req.params["a"])
+  // console.log(hasil);
+  res.send("why")
+})
+
+app.post('/notes', (req, res) => {
+  const body = req.body;
+  const note = new Note({
+    name: body.name,
+    text: body.text
+  });
+});
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
+
+module.exports = app

@@ -1,0 +1,13 @@
+- Docker
+    - Image [kode siap pakai]
+        - golang, node, python, program yang kita buat contoh .exe
+        - yang dibutuhkan Dockerfile [step step bagaimana source code kita di buat]
+        -> Harus Dockerfile di root aplikasi
+            - docker build . -t nashrull/nodestart:latest
+    - Container
+        - tempat si image berjalan
+        - env var, expose port, dependency, nama container
+
+
+compose:
+build > image > hub.docker.com > pull pake compose
