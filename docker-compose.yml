@@ -3,7 +3,7 @@ version: "3.8"
 services:
     musician:
         container_name: musician
-        image: nashrull/nodestart:latest
+        image: nodeapp:latest
         restart: always 
         tty: true
         ports:
