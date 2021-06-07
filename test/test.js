@@ -10,6 +10,6 @@ describe('GET /', function() {
 
 describe('GET /hitung/', function() {
     it('respond with why', function(done) {
-     request(app).get('/hitung/').expect('Why', done);
+     request(app).get('/hitung/').expect('why', done);
     });
 });
