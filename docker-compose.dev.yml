@@ -1,11 +1,15 @@
 version: "3.8"
 
-services: 
+services:
+    node:
+        container_name: node
+        image: node:14
+        restart: always
+    
     musician:
         container_name: musician
         image: nashrull/nodestart:latest
         restart: always 
         ports:
             - 3000:3000
-
             
