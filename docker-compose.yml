@@ -5,7 +5,7 @@ services:
         container_name: musician
         image: nodeapp:latest
         restart: always 
-        tty: true
+        tty: false
         ports:
             - 3000:3000
             
