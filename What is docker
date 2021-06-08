@@ -8,7 +8,7 @@
         - tempat si image berjalan
         - env var, expose port, dependency, nama container
 
-ssh -i arifcicd.pem ubuntu@18.188.50.36
+ssh -i arifcicd.pem ubuntu@3.141.16.250
 
 
 compose:
