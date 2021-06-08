@@ -1,4 +1,5 @@
 var request = require('supertest');
+
 var app = require('../app.js');
 describe('GET /', function() {
  it('respond with hello world', function(done) {
@@ -7,9 +8,14 @@ describe('GET /', function() {
  });
 });
 
+describe('GET /abcde', function() {
+    it('respond with abcde', function(done) {
+     request(app).get('/abcde').expect('abcde', done);
+    });
+});
 
-describe('GET /hitung/', function() {
-    it('respond with why', function(done) {
-     request(app).get('/hitung/').expect('why', done);
+describe('GET /abcde', function() {
+    it('respond with abcde', function(done) {
+     request(app).get('/abcde').expect('abcd', done);
     });
 });

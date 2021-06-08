@@ -1,6 +1,8 @@
+require('dotenv').load()
 const express = require('express')
 const app = express()
-const port = 3000
+let port = 3000
+
 
 app.get('/', (req, res) => {
   res.send('hello world')
@@ -10,10 +12,10 @@ app.get('/bandung', (req, res) => {
   res.send('Hello Bandung')
 })
 
-app.get('/hitung/', (req, res) => {
+app.get('/abcde', (req, res) => {
   // hasil = parseInt(req.params["a"])
   // console.log(hasil);
-  res.send("why")
+  res.send("abcde")
 })
 
 app.post('/notes', (req, res) => {

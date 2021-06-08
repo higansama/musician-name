@@ -11,3 +11,22 @@
 
 compose:
 build > image > hub.docker.com > pull pake compose
+
+
+
+#docker exec -t musician npm testdocker container stop musician
+npm test
+docker container stop musician
+
+docker container rm musician
+docker rmi -f nodeapp:latest
+#docker images
+#docker container ls -all
+docker build -t nodeapp:latest .
+#cat ~/login-docker.txt | docker login --username nashrull --password-stdin
+#docker push nashrull/nodestart:latest
+#ls -l
+docker-compose up -d
+#docker-compose stop musicia
+docker exec -i musician npm test
+docker ps
