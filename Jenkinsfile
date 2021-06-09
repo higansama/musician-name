@@ -15,7 +15,8 @@ pipeline{
         }
         stage("deploy"){
             steps{
-
+                echo 'Testing the apps'   
+                sh 'npm test'
             }
         }
     }
