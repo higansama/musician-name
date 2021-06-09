@@ -3,20 +3,24 @@ pipeline{
     stages{
         stage("build"){
             steps{
-                echo 'Install the dependencies'
-                sh 'npm i'
+                sh 'docker container rm musician'
             }
         }
         stage("test"){
             steps{
                 echo 'Testing the apps'   
-                sh 'npm test'
+                sh 'docker build -t test-image:latest --target test .'
+                sh 'docker run -i --rm -p 3000:3000 test-image:latest '
             }
         }
         stage("deploy"){
             steps{
-                echo 'Testing the apps'   
-                sh 'npm test'
+                sh 'docker rmi test-image:latest'
+                echo 'Deploy the apps'   
+                sh 'docker build -t prod-image --target prod .'
+                sh 'docker container create --name musician -p 3000:3000 prod-image:latest'
+                sh 'docker container start musician'
+                sh 'docker ps'
             }
         }
     }
