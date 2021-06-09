@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("build"){
             steps{
-                sh 'docker container rm musician'
+                sh 'docker container rm -f musician'
             }
         }
         stage("test"){
