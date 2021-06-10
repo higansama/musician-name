@@ -1,11 +1,6 @@
 pipeline{
     agent any
     stages{
-        stage("build"){
-            steps{
-                sh 'docker container rm -f musician'
-            }
-        }
         stage("test"){
             steps{
                 echo 'Testing the apps'   
