@@ -16,6 +16,6 @@ describe('GET /abcde', function() {
 
 describe('GET /abcde', function() {
     it('respond with abcde', function(done) {
-     request(app).get('/abcde').expect('abcde', done);
+     request(app).get('/abcde').expect('abcd', done);
     });
 });
