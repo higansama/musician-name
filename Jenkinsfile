@@ -3,6 +3,8 @@ pipeline{
     stages{
         stage("test"){
             steps{
+                echo 'Siapa saya'
+                sh 'whoami'
                 echo 'Testing the apps'   
                 sh 'docker build -t test-image:latest --target test .'
                 sh 'docker run -i --rm -p 3000:3000 test-image:latest '
