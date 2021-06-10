@@ -7,8 +7,8 @@ pipeline{
                 sh 'whoami'
                 sh 'users --version'
                 echo 'Testing the apps'   
-                sh 'docker build -t test-image:latest --target test .'
-                sh 'docker run -i --rm -p 3000:3000 test-image:latest '
+                sh 'sudo docker build -t test-image:latest --target test .'
+                sh 'sudo docker run -i --rm -p 3000:3000 test-image:latest '
             }
         }
         stage("deploy"){
