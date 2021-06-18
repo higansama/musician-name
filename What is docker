@@ -32,3 +32,13 @@ docker-compose up -d
 #docker-compose stop musicia
 docker exec -i musician npm test
 docker ps
+
+
+
+
+
+10 juni 2021
+1. build apps dulu baru test
+2. kalo berhasil di deploy
+3. pastikan container tidak perlu dibuat ulang
+4. kalo 123 fail, pake github action
