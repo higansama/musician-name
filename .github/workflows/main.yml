@@ -36,3 +36,7 @@ jobs:
         run: |
              npm i 
              npm test
+      - name: Build with docker
+        run: |
+              docker build -t nashrull/helloworld:latest  .
+              docker push nashrull/helloworld:latest
