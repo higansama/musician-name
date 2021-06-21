@@ -37,12 +37,12 @@ jobs:
              npm i 
              npm test
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: docker/build-push-action@v2
-      - name: Build with docker
-        run: |
-              docker build -t nashrull/helloworld:latest  .
-              docker push nashrull/helloworld:latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: docker/build-push-action@v2
+#       - name: Build with docker
+#         run: |
+#               docker build -t nashrull/helloworld:latest  .
+#               docker push nashrull/helloworld:latest
