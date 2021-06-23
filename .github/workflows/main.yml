@@ -37,12 +37,25 @@ jobs:
              npm i 
              npm test
 
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: docker/build-push-action@v2
-#       - name: Build with docker
-#         run: |
-#               docker build -t nashrull/helloworld:latest  .
-#               docker push nashrull/helloworld:latest
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # - uses: docker/build-push-action@v2
+      # - name: Build with docker
+      #   run: |
+      #         docker build -t nashrull/helloworld:latest  .
+      #         docker push nashrull/helloworld:latest
+      - name: Login to DockerHub
+        uses: docker/login-action@v1 
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: nashrull/helloworld:latest
+      - name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
