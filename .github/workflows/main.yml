@@ -36,7 +36,7 @@ jobs:
         run: |
              npm i 
              npm test
-             echo ${{ secrets.PASSWORD 
+             echo ${{ secrets.PASSWORD }}
              echo ${{ secrets.DOCKERHUB_USERNAME }}
 
   build:
